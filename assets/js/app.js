@@ -72,7 +72,8 @@ function placeOrder(e){
   const f = new FormData(e.target);
   const order = {
     ref: "AMP-" + Date.now().toString().slice(-6),
-    name: f.get("name"), email: f.get("email"), phone: f.get("phone"), notes: f.get("notes") || "",
+    name: f.get("name"), email: f.get("email"), phone: f.get("phone"),
+    method: f.get("method"), address: f.get("address") || "N/A", notes: f.get("notes") || "",
     items: CART.map(l=>({...l, name: PRODUCTS.find(p=>p.id===l.id).name, php: PRODUCTS.find(p=>p.id===l.id).php})),
     total: cartTotal(), date: new Date().toISOString().slice(0,10), status: "Pending"
   };
@@ -85,7 +86,7 @@ function placeOrder(e){
   CART = []; saveCart(); renderProducts();
   closeAll();
   const body = encodeURIComponent(
-    `Order Ref: ${order.ref}\nName: ${order.name}\nEmail: ${order.email}\nPhone: ${order.phone}\n\n` +
+    `Order Ref: ${order.ref}\nName: ${order.name}\nEmail: ${order.email}\nPhone: ${order.phone}\nCollection: ${order.method}\nAddress: ${order.address}\n\n` +
     order.items.map(i=>`• ${i.name} × ${i.qty} — ${money(i.php*i.qty)}`).join("\n") +
     `\n\nTOTAL: ${money(order.total)}\nNotes: ${order.notes}`);
   $("#done-ref").textContent = order.ref;
