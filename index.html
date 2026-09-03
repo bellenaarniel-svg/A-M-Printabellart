@@ -98,7 +98,7 @@
       <div class="card"><div class="card-body"><div style="font-size:2rem">1️⃣</div><h3>Choose a service</h3><p>Browse the services above and set the quantity you need.</p></div></div>
       <div class="card"><div class="card-body"><div style="font-size:2rem">2️⃣</div><h3>Review your cart</h3><p>Open the cart icon to check items and your running total.</p></div></div>
       <div class="card"><div class="card-body"><div style="font-size:2rem">3️⃣</div><h3>Send your details</h3><p>Fill out the order form — we confirm via email or Viber/SMS.</p></div></div>
-      <div class="card"><div class="card-body"><div style="font-size:2rem">4️⃣</div><h3>Print &amp; pick-up</h3><p>Pay via GCash or cash, then pick-up or have it delivered.</p></div></div>
+      <div class="card"><div class="card-body"><div style="font-size:2rem">4️⃣</div><h3>Print &amp; Receive</h3><p>Pay via GCash or cash, then pick-up or have it delivered via Lalamove, LBC, or J&T.</p></div></div>
     </div>
     <div class="center" style="margin-top:30px"><button class="btn btn-primary" onclick="openCart()">Review my order 🛍️</button></div>
   </div>
@@ -206,6 +206,16 @@
     <div class="field"><label>Full name</label><input name="name" required></div>
     <div class="field"><label>Email</label><input name="email" type="email" required></div>
     <div class="field"><label>Mobile number</label><input name="phone" required placeholder="09XX XXX XXXX"></div>
+    <div class="field">
+      <label>Collection method</label>
+      <select name="method" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 1rem; background: #fff;">
+        <option value="Pick up">Pick up at Sorrento Village (Rodriguez, Rizal)</option>
+        <option value="Delivery via Lalamove">Delivery via Lalamove</option>
+        <option value="Delivery via LBC">Delivery via LBC</option>
+        <option value="Delivery via J&T">Delivery via J&T</option>
+      </select>
+    </div>
+    <div class="field"><label>Delivery Address (if applicable)</label><input name="address" placeholder="House/Unit No., Street, Barangay, City, Province"></div>
     <div class="field"><label>Notes / design instructions</label><textarea name="notes" rows="3"></textarea></div>
     <button class="btn btn-primary" style="width:100%" type="submit">Place order</button>
   </form>
