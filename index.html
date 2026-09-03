@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A&amp;M PrintabelleArt — Personalized Printing Services | Rodriguez, Rizal</title>
+<meta name="description" content="A&amp;M PrintabelleArt — photo prints, stickers, sintra boards, personal items, invitation cards, docs print, photo books and rush ID. Founded 2024. 1000+ successful orders.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='78' font-size='78'>💗</text></svg>">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <!-- clean minimal A&M mark, transparent -->
+      <svg viewBox="0 0 64 64" aria-label="A&M">
+        <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ff2f8e"/><stop offset="1" stop-color="#7fb0ff"/>
+        </linearGradient></defs>
+        <circle cx="32" cy="32" r="29" fill="none" stroke="url(#g1)" stroke-width="3"/>
+        <text x="32" y="41" text-anchor="middle" font-family="Trebuchet MS, sans-serif"
+              font-size="24" font-weight="700" fill="url(#g1)">A&amp;M</text>
+      </svg>
+      <b>A&amp;M PrintabelleArt<span>PRINT · DESIGN · GIFT</span></b>
+    </a>
+    <ul id="navlinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="cur-toggle">
+        <button data-cur="PHP">₱ PHP</button><button data-cur="USD">$ USD</button>
+      </div>
+      <button class="icon-btn" id="cart-btn" onclick="openCart()" title="Your order">
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3h2l2.4 12.3a2 2 0 002 1.7h7.7a2 2 0 002-1.6L21 8H6"/><circle cx="10" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+        <span class="cart-count" id="cart-count" style="display:none">0</span>
+      </button>
+      <button class="icon-btn" id="admin-btn" title="Admin login">
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 018 0v3"/><circle cx="12" cy="15.5" r="1.4"/></svg>
+      </button>
+      <button class="icon-btn burger" id="burger" title="Menu">
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="wrap hero" id="top">
+  <div>
+    <span class="tagpill">💗 Rodriguez, Rizal · Since 2024</span>
+    <h1>Printing that turns your moments into <em>keepsakes</em>.</h1>
+    <p>From instax-size photo prints and die-cut stickers to sintra boards, photo books and rush IDs — A&amp;M PrintabelleArt delivers crisp, colorful, beyond-expectation output for every celebration.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#order">Start your order →</a>
+      <a class="btn btn-ghost" href="#services">See what we offer</a>
+    </div>
+    <div class="stats">
+      <div><b>1000+</b><span>SUCCESSFUL ORDERS</span></div>
+      <div><b>2024</b><span>FOUNDED</span></div>
+      <div><b>9</b><span>SERVICE LINES</span></div>
+      <div><b>24-48h</b><span>TYPICAL TURNAROUND</span></div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="center" style="margin-bottom:16px"><span class="ribbon">WE OFFER</span></div>
+    <div class="hero-grid">
+      <div class="hero-tile"><div class="em">🖼️</div><b>Photo Print</b><small>Instax up to A4</small></div>
+      <div class="hero-tile"><div class="em">🏷️</div><b>Sticker</b><small>Decals &amp; labels</small></div>
+      <div class="hero-tile"><div class="em">🪧</div><b>Sintra Boards</b><small>Signage ready</small></div>
+      <div class="hero-tile"><div class="em">🪪</div><b>Rush ID</b><small>1x1 / 2x2 / passport</small></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SERVICES / PRODUCTS ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span>Our Services</span>
+      <h2>Everything we print for you</h2>
+      <p>Pick a service, set your quantity, and add it to your order. Prices shown in <strong>Philippine Peso</strong> or <strong>US Dollar</strong> — switch anytime using the toggle above.</p>
+    </div>
+    <div class="grid" id="products-grid"></div>
+    <p class="note center" style="margin-top:22px">Bulk order? Custom layout? Message us — we quote for free. 💌</p>
+  </div>
+</section>
+
+<!-- ============ ORDER ============ -->
+<section id="order">
+  <div class="wrap">
+    <div class="sec-head"><span>How it works</span><h2>Order in 4 easy steps</h2></div>
+    <div class="grid">
+      <div class="card"><div class="card-body"><div style="font-size:2rem">1️⃣</div><h3>Choose a service</h3><p>Browse the services above and set the quantity you need.</p></div></div>
+      <div class="card"><div class="card-body"><div style="font-size:2rem">2️⃣</div><h3>Review your cart</h3><p>Open the cart icon to check items and your running total.</p></div></div>
+      <div class="card"><div class="card-body"><div style="font-size:2rem">3️⃣</div><h3>Send your details</h3><p>Fill out the order form — we confirm via email or Viber/SMS.</p></div></div>
+      <div class="card"><div class="card-body"><div style="font-size:2rem">4️⃣</div><h3>Print &amp; pick-up</h3><p>Pay via GCash or cash, then pick-up or have it delivered.</p></div></div>
+    </div>
+    <div class="center" style="margin-top:30px"><button class="btn btn-primary" onclick="openCart()">Review my order 🛍️</button></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap split">
+    <div class="panel">
+      <h3>About A&amp;M PrintabelleArt</h3>
+      <p>A&amp;M PrintabelleArt was <strong>founded in 2024</strong> in Rodriguez, Rizal with one simple goal — to make personalized printing accessible, affordable, and genuinely beautiful for every Filipino family and small business.</p>
+      <p>Since then we've completed <strong>1000+ successful orders</strong>, and we consistently <strong>meet and go beyond the expectations of our clients</strong> — from a single rush ID to full event packages.</p>
+      <div class="mini">
+        <div><b>1000+</b><span>Successful orders</span></div>
+        <div><b>2024</b><span>Year founded</span></div>
+        <div><b>100%</b><span>Client-first service</span></div>
+        <div><b>9</b><span>Service categories</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Why clients choose us</h3>
+      <ul class="info-list">
+        <li><div class="info-ic">🎨</div><div><b>Free layout assistance</b>We help design your output before printing.</div></li>
+        <li><div class="info-ic">⚡</div><div><b>Rush-friendly</b>Rush IDs in minutes, most jobs in 24–48 hours.</div></li>
+        <li><div class="info-ic">💎</div><div><b>Premium materials</b>Waterproof vinyl, photo paper, and durable PVC.</div></li>
+        <li><div class="info-ic">💬</div><div><b>Real conversation</b>Message us on Facebook or TikTok anytime.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap split">
+    <div class="panel">
+      <h3>Visit or message us</h3>
+      <ul class="info-list">
+        <li><div class="info-ic">📍</div><div><b>Address</b>B41 L15 Sorrento Village, Burgos, Rodriguez, Rizal</div></li>
+        <li><div class="info-ic">📞</div><div><b>Contact number</b><a href="tel:09196226730">0919 622 6730</a></div></li>
+        <li><div class="info-ic">✉️</div><div><b>Email</b><a href="mailto:amprintabellart@gmail.com">amprintabellart@gmail.com</a></div></li>
+        <li><div class="info-ic">🕘</div><div><b>Store hours</b>Monday to Saturday · 9:00 AM – 7:00 PM</div></li>
+      </ul>
+      <p style="margin-top:20px;font-weight:700;color:var(--muted);font-size:.82rem;letter-spacing:1px">FOLLOW US</p>
+      <div class="socials">
+        <a class="fb" href="https://www.facebook.com/profile.php?id=amprintabellart" target="_blank" rel="noopener" title="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5H16.7V4.6c-.3 0-1.3-.13-2.47-.13-2.45 0-4.13 1.5-4.13 4.25v2.18H7.4V14h2.7v8h3.4z"/></svg>
+        </a>
+        <a class="tt" href="https://www.tiktok.com/@amprintabellart" target="_blank" rel="noopener" title="TikTok">
+          <svg viewBox="0 0 24 24"><path d="M16.6 5.82A4.28 4.28 0 0115.5 3h-3.1v12.4a2.6 2.6 0 11-1.85-2.5v-3.1a5.7 5.7 0 105.05 5.66V9.4a7.3 7.3 0 004.3 1.38V7.68a4.3 4.3 0 01-3.3-1.86z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Send an inquiry</h3>
+      <form onsubmit="event.preventDefault(); location.href='mailto:amprintabellart@gmail.com?subject=Inquiry from '+this.n.value+'&body='+encodeURIComponent(this.m.value+'\n\nContact: '+this.c.value);">
+        <div class="field"><label>Your name</label><input name="n" required placeholder="Juan Dela Cruz"></div>
+        <div class="field"><label>Contact number / email</label><input name="c" required placeholder="09XX XXX XXXX"></div>
+        <div class="field"><label>What do you need printed?</label><textarea name="m" rows="4" required placeholder="e.g. 50 pcs invitation cards for a debut on Dec 12"></textarea></div>
+        <button class="btn btn-primary" type="submit">Send inquiry ✉️</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h4>A&amp;M PrintabelleArt</h4>
+      <p>Personalized printing services since 2024. Photo prints, stickers, sintra boards, invitations, photo books, rush IDs and more — proudly serving Rodriguez, Rizal and beyond.</p>
+      <div class="socials">
+        <a class="fb" href="https://www.facebook.com/profile.php?id=amprintabellart" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5H16.7V4.6c-.3 0-1.3-.13-2.47-.13-2.45 0-4.13 1.5-4.13 4.25v2.18H7.4V14h2.7v8h3.4z"/></svg></a>
+        <a class="tt" href="https://www.tiktok.com/@amprintabellart" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16.6 5.82A4.28 4.28 0 0115.5 3h-3.1v12.4a2.6 2.6 0 11-1.85-2.5v-3.1a5.7 5.7 0 105.05 5.66V9.4a7.3 7.3 0 004.3 1.38V7.68a4.3 4.3 0 01-3.3-1.86z"/></svg></a>
+      </div>
+    </div>
+    <div><h4>Services</h4><ul>
+      <li>Photo Print</li><li>Sticker · Decals &amp; Labels</li><li>Sintra Boards</li><li>Personal Items</li>
+      <li>Invitation Cards / Ref Magnet</li><li>Docs Print</li><li>Photo Book &amp; Magazine</li><li>Rush ID</li></ul></div>
+    <div><h4>Get in touch</h4><ul>
+      <li>B41 L15 Sorrento Village,<br>Burgos, Rodriguez, Rizal</li>
+      <li>0919 622 6730</li>
+      <li>amprintabellart@gmail.com</li>
+      <li>Mon–Sat · 9AM–7PM</li></ul></div>
+  </div>
+  <div class="copy">© <span id="yr"></span> A&amp;M PrintabelleArt. All rights reserved. · <a href="#" onclick="event.preventDefault();document.getElementById('admin-btn').click()">Admin</a></div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cart">
+  <header><h3>🛍️ Your Order</h3><button class="x" onclick="closeAll()">✕</button></header>
+  <div class="drawer-body" id="cart-body"></div>
+  <div class="drawer-foot">
+    <div class="total"><span>Total</span><span id="cart-total">₱0</span></div>
+    <button class="btn btn-primary" onclick="closeAll();open$('#modal-checkout')">Proceed to checkout →</button>
+  </div>
+</aside>
+
+<!-- ============ CHECKOUT ============ -->
+<div class="modal" id="modal-checkout"><div class="modal-box">
+  <button class="x" onclick="closeAll()">✕</button>
+  <h3 style="font-family:var(--font-head);font-size:1.5rem;margin-bottom:6px">Complete your order</h3>
+  <p class="note" style="margin-bottom:18px">We'll confirm your order and payment details by email or text.</p>
+  <form onsubmit="placeOrder(event)">
+    <div class="field"><label>Full name</label><input name="name" required></div>
+    <div class="field"><label>Email</label><input name="email" type="email" required></div>
+    <div class="field"><label>Mobile number</label><input name="phone" required placeholder="09XX XXX XXXX"></div>
+    <div class="field"><label>Notes / design instructions</label><textarea name="notes" rows="3"></textarea></div>
+    <button class="btn btn-primary" style="width:100%" type="submit">Place order</button>
+  </form>
+</div></div>
+
+<!-- ============ ORDER DONE ============ -->
+<div class="modal" id="modal-done"><div class="modal-box center">
+  <button class="x" onclick="closeAll()">✕</button>
+  <div style="font-size:3rem">🎉</div>
+  <h3 style="font-family:var(--font-head);font-size:1.5rem;margin:8px 0">Order received!</h3>
+  <p class="note">Your reference number is <b id="done-ref"></b>. Send it to us so we can start printing right away.</p>
+  <a class="btn btn-primary" id="done-mail" style="margin-top:18px" href="#">Email order to A&amp;M ✉️</a>
+</div></div>
+
+<!-- ============ ADMIN LOGIN ============ -->
+<div class="modal" id="modal-login"><div class="modal-box">
+  <button class="x" onclick="closeAll()">✕</button>
+  <div class="center" style="margin-bottom:16px">
+    <div style="font-size:2.2rem">🔐</div>
+    <h3 style="font-family:var(--font-head);font-size:1.45rem">Admin Login</h3>
+    <p class="note">Dashboard access for A&amp;M staff only.</p>
+  </div>
+  <form id="login-form">
+    <div class="field"><label>Admin email</label><input id="li-email" type="email" required placeholder="you@gmail.com"></div>
+    <div class="field"><label>Password</label><input id="li-pass" type="password" required></div>
+    <div class="err" id="li-err"></div>
+    <button class="btn btn-primary" style="width:100%" type="submit">Sign in →</button>
+  </form>
+  <p class="note center" style="margin-top:14px">Owner accounts: <b>magellebellena@gmail.com</b> · <b>bellenaarniel@gmail.com</b><br>Default password: <b>amprint2024</b> (change it in <code>assets/js/data.js</code>)</p>
+</div></div>
+
+<!-- ============ DASHBOARD ============ -->
+<div class="modal" id="modal-dash"><div class="modal-box wide">
+  <button class="x" onclick="closeAll()">✕</button>
+  <div class="dash-head">
+    <h2>📊 A&amp;M Dashboard</h2>
+    <div class="who" id="dash-who"></div>
+    <button class="btn btn-ghost" style="padding:9px 18px;font-size:.85rem" onclick="logout()">Sign out</button>
+  </div>
+  <div class="tabs">
+    <button class="on" data-tab="sales" onclick="tab('sales')">Monthly Sales</button>
+    <button data-tab="inv" onclick="tab('inv')">Inventory</button>
+    <button data-tab="orders" onclick="tab('orders')">Orders</button>
+    <button data-tab="team" onclick="tab('team')">Admins</button>
+  </div>
+  <div id="kpis" class="kpis"></div>
+
+  <div class="tabpane" id="tab-sales">
+    <div class="chart"><b style="font-family:var(--font-head)">Revenue — last 12 months</b><div class="bars" id="bars"></div></div>
+    <div class="tbl-wrap" style="margin-top:18px">
+      <table><thead><tr><th>Month</th><th>Revenue</th><th>Orders</th><th>Avg / order</th><th>Growth</th></tr></thead>
+      <tbody id="sales-tbl"></tbody></table>
+    </div>
+  </div>
+
+  <div class="tabpane" id="tab-inv" style="display:none">
+    <div class="tbl-wrap">
+      <table><thead><tr><th>Item</th><th>Unit price</th><th>Stock left</th><th>Stock value</th><th>Status</th></tr></thead>
+      <tbody id="inv-tbl"></tbody></table>
+    </div>
+    <p class="note" style="margin-top:12px">Edit any stock number to update it instantly — the storefront reflects it right away.</p>
+  </div>
+
+  <div class="tabpane" id="tab-orders" style="display:none">
+    <div class="tbl-wrap">
+      <table><thead><tr><th>Ref</th><th>Date</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th></tr></thead>
+      <tbody id="orders-tbl"></tbody></table>
+    </div>
+  </div>
+
+  <div class="tabpane" id="tab-team" style="display:none">
+    <div class="tbl-wrap" style="margin-bottom:20px">
+      <table><thead><tr><th>Email</th><th>Role</th><th>Added</th><th></th></tr></thead>
+      <tbody id="admins-tbl"></tbody></table>
+    </div>
+    <div class="panel" style="padding:22px">
+      <h3 style="font-size:1.15rem">➕ Add a new admin</h3>
+      <form id="add-admin-form" style="display:grid;grid-template-columns:1.4fr 1fr .8fr auto;gap:12px;align-items:end">
+        <div class="field" style="margin:0"><label>Email</label><input id="aa-email" type="email" required placeholder="newstaff@gmail.com"></div>
+        <div class="field" style="margin:0"><label>Temp password</label><input id="aa-pass" required minlength="6"></div>
+        <div class="field" style="margin:0"><label>Role</label><select id="aa-role"><option value="admin">Admin</option><option value="staff">Staff</option></select></div>
+        <button class="btn btn-primary" type="submit" style="padding:12px 22px">Add</button>
+      </form>
+      <p class="note" style="margin-top:10px">Owner accounts cannot be removed. <a href="#" onclick="event.preventDefault();resetDemo()" style="color:var(--pink-deep);font-weight:700">Reset demo data</a></p>
+    </div>
+  </div>
+</div></div>
+
+<div class="toast" id="toast"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/admin.js"></script>
+<script src="assets/js/app.js"></script>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>

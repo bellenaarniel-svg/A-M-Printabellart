@@ -1,0 +1,63 @@
+# ============================================================
+#  A&M PrintabelleArt — static site configuration
+#  Edit values here, then mirror them in assets/js/data.js
+# ============================================================
+site:
+  name: "A&M PrintabelleArt"
+  tagline: "Print · Design · Gift"
+  description: "Personalized printing services in Rodriguez, Rizal. Photo prints, stickers, sintra boards, invitations, photo books and rush IDs."
+  founded: 2024
+  successful_orders: "1000+"
+  type: static
+  entry: index.html
+  output_dir: .
+
+theme:
+  primary: "#ff2f8e"        # watercolor pink
+  primary_deep: "#d1136c"
+  accent_blue: "#7fb0ff"
+  soft_pink: "#ffd9ec"
+  ink: "#2b1b2a"
+  background: "fixed watercolor wash (does not scroll)"
+  heading_font: "Baloo 2 / Trebuchet MS"
+  body_font: "Segoe UI"
+
+contact:
+  address: "B41 L15 Sorrento Village, Burgos, Rodriguez, Rizal"
+  phone: "09196226730"
+  email: "amprintabellart@gmail.com"
+  hours: "Monday to Saturday, 9:00 AM - 7:00 PM"
+
+social:
+  facebook: "https://www.facebook.com/profile.php?id=amprintabellart"
+  tiktok: "https://www.tiktok.com/@amprintabellart"
+
+currency:
+  default: PHP
+  supported: [PHP, USD]
+  usd_rate: 58.0            # 1 USD = 58 PHP
+
+admins:
+  owners:                   # cannot be removed from the dashboard
+    - magellebellena@gmail.com
+    - bellenaarniel@gmail.com
+  default_password: "amprint2024"
+  can_add_admins: true
+  roles: [owner, admin, staff]
+
+services:
+  - { id: photo,   name: "Photo Print",                     unit: "per print",   price_php: 25,  stock: 480 }
+  - { id: sticker, name: "Sticker (Decals, Labels & More)", unit: "per sheet",   price_php: 75,  stock: 320 }
+  - { id: sintra,  name: "Sintra Boards",                   unit: "per board",   price_php: 650, stock: 64 }
+  - { id: items,   name: "Personal Items",                  unit: "per item",    price_php: 180, stock: 210 }
+  - { id: invite,  name: "Invitation Cards / Ref Magnet",   unit: "per pc",      price_php: 45,  stock: 150 }
+  - { id: docs,    name: "Docs Print",                      unit: "per page",    price_php: 5,   stock: 2000 }
+  - { id: book,    name: "Photo Book & Magazine",           unit: "per book",    price_php: 950, stock: 38 }
+  - { id: id,      name: "Rush ID (1x1 / 2x2 / Passport)",  unit: "per set",     price_php: 60,  stock: 12 }
+  - { id: more,    name: "And More!",                       unit: "per project", price_php: 300, stock: 99 }
+
+deploy:
+  provider: github-pages
+  workflow: .github/workflows/deploy.yml
+  build_command: none
+  publish_dir: .
